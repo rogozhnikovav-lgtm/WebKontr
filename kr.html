@@ -8,58 +8,144 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
-    body {
-    font-family: 'Roboto', Arial, sans-serif;
-    background: rgba(170, 228, 199, 0.616);
-    min-height: 100vh;
-    margin: 0;
-    padding: 20px;
-    }
-    .container {
-    width: 100%;
-    max-width: 800px;
-    background: rgb(3, 68, 19);
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-    padding: 30px;
-    max-height: 300vh;
-    display: flex;
-    flex-direction: column;
-    }
-    h1 {
-    color: #fffcfc;
-    margin-bottom: 25px;
-    text-align: center;
-    font-weight: 700;
-    font-size: 2.2em;
-    background: rgb(255, 255, 255);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    
-}
-p1{
-    color: #fffcfc;
-    text-align: center;
-}
-div{
-    align-self: center;
-}
-button{
-    padding: 12px 20px;
-    border: none;
-
-    font-size: 14px;
-    font-weight: 500;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    font-family: 'Roboto', sans-serif;
-    background: #f76f00;
-    color: white;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 5px;
-}
-
+    * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: #f5f7f5;
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            color: #1e2b20;
+            line-height: 1.5;
+        }
+        .wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+        /* сетка и карточки */
+        .section {
+            padding: 2rem 2rem;
+            border-bottom: 1px solid #e0f0e0;
+        }
+        .section:last-child {
+            border-bottom: none;
+        }
+        .section-title {
+            font-size: 2rem;
+            font-weight: 300;
+            letter-spacing: -0.02em;
+            margin-bottom: 1.5rem;
+            color: #1f3b2c;
+            border-left: 6px solid #4f8a6b;
+            padding-left: 1.2rem;
+        }
+        .section-title-center {
+            text-align: center;
+            border-left: none;
+            padding-left: 0;
+            margin-bottom: 2rem;
+            font-weight: 400;
+        }
+        .badge-header {
+            background: #d9f0e1;
+            padding: 0.75rem 2rem;
+            text-align: center;
+            font-weight: 500;
+            font-size: 1.1rem;
+            color: #1b4e3a;
+            border-bottom: 2px solid #a6cdb8;
+        }
+        .badge-header span {
+            background: #2d6e4b;
+            color: white;
+            padding: 0.25rem 1rem;
+            border-radius: 40px;
+            margin-left: 1rem;
+            font-size: 0.9rem;
+        }
+        .company-name {
+            font-size: 2.8rem;
+            font-weight: 200;
+            color: #1b4e3a;
+            text-transform: uppercase;
+            border-bottom: 1px solid #c0ddce;
+        }
+        .company-sub {
+            padding-bottom: 1rem;
+            color: #4f6b5d;
+            font-size: 1rem;
+            font-weight: 400;
+        }
+        /* блок акции */
+        .promo-block {
+            background: linear-gradient(110deg, #f0fcf5 0%, #dff0e6 100%);
+            border-radius: 24px;
+            padding: 2rem 2.5rem;
+            margin: 1.5rem 0 2rem 0;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .promo-text h3 {
+            font-size: 2.2rem;
+            font-weight: 350;
+            line-height: 1.2;
+            color: #163a29;
+        }
+        .promo-text p {
+            font-size: 1.1rem;
+            margin-top: 0.5rem;
+            color: #2b5a42;
+        }
+        .promo-btn {
+            background: #2d6e4b;
+            border: none;
+            color: white;
+            font-size: 1.3rem;
+            font-weight: 500;
+            padding: 1rem 2.5rem;
+            border-radius: 60px;
+            cursor: default;
+            box-shadow: 0 4px 12px rgba(31, 77, 47, 0.3);
+            transition: 0.2s;
+            white-space: nowrap;
+        }
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.8rem;
+            margin-top: 1.5rem;
+        }
+        .cards-grid1 {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 2fr));
+            gap: 2.2rem;
+            margin-top: 1.5rem;
+        }
+        .service-card {
+            background: #f9fffb;
+            border: 1px solid #d2ecd9;
+            border-radius: 20px;
+            padding: 1.5rem;
+            transition: all 0.2s;
+        }
+        .service-card h4 {
+            font-size: 1.5rem;
+            font-weight: 450;
+            color: #1a422f;
+            margin-bottom: 0.8rem;
+            border-bottom: 2px dotted #b8dac6;
+            padding-bottom: 0.5rem;
+        }
+        .service-card p {
+            color: #3c5a4b;
+            margin-bottom: 1.2rem;
+            font-size: 0.95rem;
+        }
 
 
     </style>
@@ -76,19 +162,55 @@ button{
             <a href="#6">Консультации</a> | 
             <a href="#6">Контакты</a> | 
         </nav>
+    <div class="wrapper">
+    <div class="company-name">Название компании</div>
+    <div class="company-sub">Студия ландшафтного дизайна</div>
+
+    <div class="section">
+        <div class="promo-block">
+            <div class="promo-text">
+                <h3>Разработка проекта ландшафтной<br>организации участка со скидкой 50%</h3>
+                <p>Мы можем осуществить такую работу в течение 1-2 недель. Вам помогут подготовить проект и получить необходимые документы.</p>
+            </div>
+            <div class="promo-btn">Оставить заявку</div>
+        </div>
     </div>
-    
-        <h2>Название компании</h2>
+    <div class="section">
+        <div class="cards-grid">
+            <div class="service-card">
+                <h4>Ландшафтное проектирование</h4>
+                <p></p>
+                
+            </div>
+            <div class="service-card">
+                <h4>Благоустройство и озеленение</h4>
+                <p></p>
+                
+            </div>
+            <div class="service-card">
+                <h4>Автоматический полив</h4>
+                <p></p>
+                
+            </div>
+        </div>
+        <div class="cards-grid1">
+            <div class="service-card">
+                <h4>Ландшафтные проекты для дачи</h4>
+                <p>Наши професссионалы помогут вам сделать все на высшем уровне ландшафтного дизайна и помогут вам избежать ненужных финансовых затрат</p>
+                
+            </div>
+            <div class="service-card">
+                <h4>Посадка крупномеров, деревьев и кустарников</h4>
+                <p>Наши деревья очень хорошо приживаюися и создают атмосферу полноценного и интересного ландшафта</p>
+                
+            </div>
+            <div class="service-card">
+                <h4>Пруды, водоемы, мосты</h4>
+                <p>Вода — это место отдыха и разместив у себя в саду небольшой пруд или водоем, вы получите незабываемое ощущение мира и спокойствия </p>
+                
+            </div>
+        </div>
+            
         
-        <p>Студия ландшафтного дизайна </p> 
-        <p>+7(123) 123-45-67 <button>Заказать звонок</button></p>
-    <DIV class = "container">
-        <header>
-            <h1>Разработка Проекта Ладшафтной оргаизации участка со скидкой 50%</h1>
-            <p1>Мы можем осуществить Вашу мечту, а ещё - помочь Вам выиграть подарочную карту на 5000 рублей!!</p1>
-        </header>
-        <button>
-            Отправить заявку
-        </button>
-    </DIV>
+    </div>
 </body>
