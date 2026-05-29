@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <script>
+    console.log("Я скрипт!"); // 1. скрипт в <head>
+  </script>
+  <script src="script.js"></script><!-- 2. скрипт во внешнем файле -->
+</head>
+<body>
+<script name = 1>
+  let admin = "";
+  const name = "Джон"
+  admin = name;
+  console.log(admin);
+</script>
+<script name = 2>
+const a = Number(prompt("Первое число?", 1));
+const b = Number(prompt("Второе число?", 2));
+alert(a + b);    
+</script>
+<script name = 3>
+    for(let i = 2; i<=10; i++)
+{
+    if(i%2==0)
+    console.log(i);
+}
+</script>
+<script name = 4>
+    let i = 0;
+    while(i<3)
+{
+    alert(`number ${i}!`);
+    i++;
+}
+</script>
+<script name = 5>
+let num;
+
+do {
+  num = prompt("Введите число больше 100!", "");
+  
+  if (num === null) {
+    break;
+  }
+  
+} while (num !== null && Number(num) <= 100);
+</script>
+<script name = 6>
+    let n = 10;
+
+for (let i = 2; i <= n; i++) {
+  let isPrime = true;
+  
+  for (let j = 2; j < i; j++) {
+    if (i % j === 0) {
+      isPrime = false;  
+      break;            
+    }
+  }
+  
+  if (isPrime) {
+    console.log(i);
+  }
+}
+</script>
+</body>
